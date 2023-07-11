@@ -10,7 +10,7 @@ const Usuarios = () => {
         try {
             const response = await axios.get(urlAPIUsuarios, {
             headers: {
-                Token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2RkOWM4NTliM2I5MTYyZGViZWZmZSIsImlhdCI6MTY4OTA0ODY4MiwiZXhwIjoxNjg5MTM1MDgyfQ.Qomm7ZNG_DogZ6PCx41Mn6uLjZMnY5jkMpBOxHtT2fM",
+                Token: process.env.NEXT_PUBLIC_TOKEN,
             },
             });
             setUsuarios(response.data.data);
