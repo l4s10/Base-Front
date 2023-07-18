@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { format } from 'date-fns';
+import Link from 'next/link';
 
 import Usuarios from '../users';
 
@@ -55,7 +56,9 @@ const Asistencia = () => {
     return (
         <div className="container mt-5">
             <h1 className="mb-4 text-center">Lista de asistencias</h1>
-            <a href='/brigada/ingresar' className='btn btn-secondary'>Ingresar nueva asistencia</a>
+            <Link href="/brigada/ingresar">
+                <a className="btn btn-secondary">Ingresar nueva asistencia</a>
+            </Link>
             {asistencias.map((asistencia) => (
                 <div key={asistencia._id} className="card mb-3">
                     <div className="card-body">
