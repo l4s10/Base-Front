@@ -1,21 +1,28 @@
 import React from 'react';
-import TituloGracioso from '../../components/Titulo';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Typography, Button, Container, List, ListItem } from '@mui/material';
 
 const Contacto = () => {
   return (
     <div>
-      <title>Seccion contacto</title>
+      <Head>
+        <title>Sección contacto</title>
+      </Head>
+      <Container maxWidth="md">
         <section>
-          <TituloGracioso></TituloGracioso>
-            <h2>Contacto</h2>
-            <p>Puedes contactarnos a través de:</p>
-            <ul>
-            <li>Teléfono: 123-456-7890</li>
-            <li>Correo electrónico: info@example.com</li>
-            <li>Formulario de contacto</li>
-            </ul>
-            <a href='/' className='btn btn-primary'>Volver a index</a>
+          <Typography variant="h2">Contacto</Typography>
+          <Typography variant="body1">Puedes contactarnos a través de:</Typography>
+          <List>
+            <ListItem>Teléfono: 123-456-7890</ListItem>
+            <ListItem>Correo electrónico: info@example.com</ListItem>
+            <ListItem>Formulario de contacto</ListItem>
+          </List>
+          <Link href="/" passHref>
+            <Button variant="contained" color="primary">Volver a index</Button>
+          </Link>
         </section>
+      </Container>
     </div>
   );
 };
