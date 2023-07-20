@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <div>
+            <div className="bg-animation">
                 <Head>
                     <title>Brigadistas Unidos</title>
                     <meta name="description" content="Somos una organización de brigadistas dedicada a ayudar en tiempos de crisis." />
@@ -38,7 +38,7 @@ const Home = () => {
                             Bienvenidos a Brigadistas Unidos
                         </Typography>
                         <section>
-                            <Card sx={{ mt: 4 }}>
+                            <Card sx={{ mt: 4, backgroundColor: "#FEE3A2" }}>
                                 <CardContent>
                                   <Typography variant="h5" gutterBottom>
                                       ¿Quienes somos?
@@ -57,7 +57,7 @@ const Home = () => {
                                     </Button>
                                 </CardContent>
                             </Card>
-                            <Card sx={{ mt: 4 }}>
+                            <Card sx={{ mt: 4, backgroundColor: "#FFA570" }}>
                                 <CardContent>
                                     <Typography variant="h5" component="div">
                                         Nuestros valores
@@ -67,11 +67,21 @@ const Home = () => {
                                     </Typography>
                                 </CardContent>
                             </Card>
-                            <Link href="/contacto">
-                                <Button variant="contained" color="primary" sx={{ mt: 4 }}>
-                                    Contáctanos
-                                </Button>
-                            </Link>
+                            <Card sx={{ mt: 4, backgroundColor: "#778D45" }}>
+                                <CardContent>
+                                    <Typography variant="h5" component="div">
+                                        Únete a nosotros
+                                    </Typography>
+                                    <Typography variant="body2">
+                                        Estamos siempre en busca de voluntarios comprometidos. Únete a nuestra causa y hagamos una diferencia juntos.
+                                    </Typography>
+                                    <Link href="/contacto">
+                                        <Button variant="contained" color="primary" sx={{ mt: 4 }}>
+                                            Contáctanos
+                                        </Button>
+                                    </Link>
+                                </CardContent>
+                            </Card>
                         </section>
                     </Container>
                 </Box>
